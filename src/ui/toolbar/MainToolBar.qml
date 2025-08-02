@@ -7,10 +7,13 @@
  *
  ****************************************************************************/
 
-import QtQuick          2.12
+// import QtQuick          2.12
+import QtQuick 2.15
 import QtQuick.Controls 2.4
 import QtQuick.Layouts  1.11
+// import QtQuick.Layouts 1.15
 import QtQuick.Dialogs  1.3
+import QGroundControl.Controls 1.0
 
 import QGroundControl                       1.0
 import QGroundControl.Controls              1.0
@@ -222,4 +225,65 @@ Rectangle {
             onClicked:      largeProgressBar._userHide = true
         }
     }
+
+    QGCButton {
+        id: customStatusButton
+        text: "Vehicle Status"
+        anchors.top: parent.top
+        anchors.right: parent.right
+        anchors.margins: 8
+        height: 50
+
+        onClicked: {
+            statusDialog.open()
+        }
+    }
+
+    Popup {
+        id: statusDialog
+        x: parent.width - width - 20
+        y: customStatusButton.height + 20
+        width: 250
+        height: 180
+        modal: true  // Optional: enables background blocking
+        focus: true  // Ensures keyboard input (if needed)
+
+        background: Rectangle {
+            color: "#262626"
+            radius: 8
+        }
+
+        contentItem: Column {
+            anchors.centerIn: parent
+            spacing: 10
+            padding: 10
+
+            Text {
+                text: "GPS: " + (QGroundControl.multiVehicleManager.activeVehicle ?
+                                 QGroundControl.multiVehicleManager.activeVehicle.gps.count.valueString : "N/A")
+                color: "white"
+            }
+
+            Text {
+                text: "Battery: " + (QGroundControl.multiVehicleManager.activeVehicle ?
+                                         QGroundControl.multiVehicleManager.activeVehicle.battery.percentRemaining.valueString +
+                                                                 QGroundControl.multiVehicleManager.activeVehicle.battery.percentRemaining.units : "N/A")
+                color: "white"
+            }
+
+            Text {
+                text: "Mode: " + (QGroundControl.multiVehicleManager.activeVehicle ?
+                                   QGroundControl.multiVehicleManager.activeVehicle.flightMode : "N/A")
+                color: "white"
+            }
+
+            QGCButton {
+                text: "Close"
+                onClicked: statusDialog.close()
+            }
+        }
+    }
+
+
+
 }

@@ -217,7 +217,7 @@ void CustomPlugin::paletteOverride(QString colorName, QGCPalette::PaletteColorIn
         colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#9d9d9d");
     }
     else if (colorName == QStringLiteral("buttonHighlight")) {
-        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#07916d");
+        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#c0c02c");
         colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupDisabled]  = QColor("#495057");
         colorInfo[QGCPalette::Light][QGCPalette::ColorGroupEnabled]  = QColor("#aeebd0");
         colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#e4e4e4");
@@ -229,9 +229,9 @@ void CustomPlugin::paletteOverride(QString colorName, QGCPalette::PaletteColorIn
         colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#2c2c2c");
     }
     else if (colorName == QStringLiteral("primaryButton")) {
-        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#12b886");
+        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#b5a91e");
         colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupDisabled]  = QColor("#495057");
-        colorInfo[QGCPalette::Light][QGCPalette::ColorGroupEnabled]  = QColor("#aeebd0");
+        colorInfo[QGCPalette::Light][QGCPalette::ColorGroupEnabled]  = QColor("#b5a91e");
         colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#585858");
     }
     else if (colorName == QStringLiteral("primaryButtonText")) {
@@ -349,10 +349,10 @@ void CustomPlugin::paletteOverride(QString colorName, QGCPalette::PaletteColorIn
         colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#000000");
     }
     else if (colorName == QStringLiteral("brandingPurple")) {
-        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#4a2c6d");
-        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupDisabled]  = QColor("#4a2c6d");
-        colorInfo[QGCPalette::Light][QGCPalette::ColorGroupEnabled]  = QColor("#4a2c6d");
-        colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#4a2c6d");
+        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#c2b200");
+        colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupDisabled]  = QColor("#c2b200");
+        colorInfo[QGCPalette::Light][QGCPalette::ColorGroupEnabled]  = QColor("#c2b200");
+        colorInfo[QGCPalette::Light][QGCPalette::ColorGroupDisabled] = QColor("#c2b200");
     }
     else if (colorName == QStringLiteral("brandingBlue")) {
         colorInfo[QGCPalette::Dark][QGCPalette::ColorGroupEnabled]   = QColor("#6045c5");

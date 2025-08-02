@@ -23,30 +23,41 @@ DEFINES += APP_VERSION_STR=\"\\\"$$CUSTOM_QGC_VERSION\\\"\"
 message(Custom QGC Version: $${CUSTOM_QGC_VERSION})
 
 # Build a single flight stack by disabling APM support
-CONFIG  += QGC_DISABLE_APM_MAVLINK
-CONFIG  += QGC_DISABLE_APM_PLUGIN QGC_DISABLE_APM_PLUGIN_FACTORY
+# CONFIG  += QGC_DISABLE_APM_MAVLINK
+# CONFIG  += QGC_DISABLE_APM_PLUGIN QGC_DISABLE_APM_PLUGIN_FACTORY
 
 # We implement our own PX4 plugin factory
-CONFIG  += QGC_DISABLE_PX4_PLUGIN_FACTORY
+# CONFIG  += QGC_DISABLE_PX4_PLUGIN_FACTORY
+
+CONFIG += APMFirmwarePlugin
+CONFIG -= QGC_DISABLE_APM_PLUGIN
+CONFIG -= QGC_DISABLE_APM_MAVLINK
+CONFIG -= QGC_DISABLE_APM_PLUGIN_FACTORY
+
 
 # Branding
 
 DEFINES += CUSTOMHEADER=\"\\\"CustomPlugin.h\\\"\"
 DEFINES += CUSTOMCLASS=CustomPlugin
 
+QGC_APP_NAME        = "indrones"
+QGC_BINARY_NAME     = "indronesqgroundcontrol"
+QGC_ORG_NAME        = "indrones solutions private limited"
+QGC_ORG_DOMAIN      = "org.indrones"
+QGC_ANDROID_PACKAGE = "org.custom.indrones"
+QGC_APP_DESCRIPTION = "Custom indrones"
+QGC_APP_COPYRIGHT   = "Copyright (C) 2020 indrones Development Team. All rights reserved."
+
 TARGET   = CustomQGroundControl
-DEFINES += QGC_APPLICATION_NAME='"\\\"Custom QGroundControl\\\""'
+DEFINES += QGC_APPLICATION_NAME='"\\\"$$QGC_APP_NAME\\\""'
+DEFINES += QGC_ORG_NAME=\"\\\"$$QGC_ORG_NAME\\\"\"
+DEFINES += QGC_ORG_DOMAIN=\"\\\"$$QGC_ORG_DOMAIN\\\"\"
+DEFINES += QGC_ANDROID_PACKAGE=\"\\\"$$QGC_ANDROID_PACKAGE\\\"\"
+DEFINES += QGC_APP_DESCRIPTION=\"\\\"$$QGC_APP_DESCRIPTION\\\"\"
+DEFINES += QGC_APP_COPYRIGHT=\"\\\"$$QGC_APP_COPYRIGHT\\\"\"
 
-DEFINES += QGC_ORG_NAME=\"\\\"qgroundcontrol.org\\\"\"
-DEFINES += QGC_ORG_DOMAIN=\"\\\"org.qgroundcontrol\\\"\"
 
-QGC_APP_NAME        = "Custom QGroundControl"
-QGC_BINARY_NAME     = "CustomQGroundControl"
-QGC_ORG_NAME        = "Custom"
-QGC_ORG_DOMAIN      = "org.custom"
-QGC_ANDROID_PACKAGE = "org.custom.qgroundcontrol"
-QGC_APP_DESCRIPTION = "Custom QGroundControl"
-QGC_APP_COPYRIGHT   = "Copyright (C) 2020 QGroundControl Development Team. All rights reserved."
+
 
 # Our own, custom resources
 RESOURCES += \
@@ -68,17 +79,17 @@ INCLUDEPATH += \
 #-------------------------------------------------------------------------------------
 # Custom Firmware/AutoPilot Plugin
 
-INCLUDEPATH += \
-    $$PWD/src/FirmwarePlugin \
-    $$PWD/src/AutoPilotPlugin
+# INCLUDEPATH += \
+#     $$PWD/src/FirmwarePlugin \
+#     $$PWD/src/AutoPilotPlugin
 
-HEADERS+= \
-    $$PWD/src/AutoPilotPlugin/CustomAutoPilotPlugin.h \
-    $$PWD/src/FirmwarePlugin/CustomFirmwarePlugin.h \
-    $$PWD/src/FirmwarePlugin/CustomFirmwarePluginFactory.h \
+# HEADERS+= \
+#     $$PWD/src/AutoPilotPlugin/CustomAutoPilotPlugin.h \
+#     $$PWD/src/FirmwarePlugin/CustomFirmwarePlugin.h \
+#     $$PWD/src/FirmwarePlugin/CustomFirmwarePluginFactory.h \
 
-SOURCES += \
-    $$PWD/src/AutoPilotPlugin/CustomAutoPilotPlugin.cc \
-    $$PWD/src/FirmwarePlugin/CustomFirmwarePlugin.cc \
-    $$PWD/src/FirmwarePlugin/CustomFirmwarePluginFactory.cc \
+# SOURCES += \
+#     $$PWD/src/AutoPilotPlugin/CustomAutoPilotPlugin.cc \
+#     $$PWD/src/FirmwarePlugin/CustomFirmwarePlugin.cc \
+#     $$PWD/src/FirmwarePlugin/CustomFirmwarePluginFactory.cc \
 

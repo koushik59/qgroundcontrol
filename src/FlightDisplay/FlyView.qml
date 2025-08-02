@@ -27,6 +27,9 @@ import QGroundControl.Palette       1.0
 import QGroundControl.ScreenTools   1.0
 import QGroundControl.Vehicle       1.0
 
+
+
+
 Item {
     id: _root
 
@@ -58,6 +61,7 @@ Item {
 
     property real   _fullItemZorder:    0
     property real   _pipItemZorder:     QGroundControl.zOrderWidgets
+    property bool showStatusPopup: false //new
 
     function _calcCenterViewPort() {
         var newToolInset = Qt.rect(0, 0, width, height)
@@ -175,4 +179,8 @@ Item {
         show:                   !QGroundControl.videoManager.fullScreen &&
                                     (videoControl.pipState.state === videoControl.pipState.pipState || mapControl.pipState.state === mapControl.pipState.pipState)
     }
+        // Other FlyView items...
+
 }
+
+

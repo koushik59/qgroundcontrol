@@ -1,12 +1,15 @@
 # Custom QGroundControl - INDRONES Edition
 
-The primary goal of QGC is ease of use for both first time and professional users.
-It provides full flight control and mission planning for any MAVLink enabled drone, and vehicle setup for  ArduPilot powered UAVs. Instructions for *using QGroundControl* are provided in the [User Manual](https://docs.qgroundcontrol.com/en/) [Indrones Build Manual](https://docs.qgroundcontrol.com/en/) (you may not need them because the UI is very intuitive!)
+*A professionally customized version of QGroundControl with enhanced security, branding, and role-based access control.*
+
+This custom build provides full flight control and mission planning for any MAVLink enabled drone, and vehicle setup for  ArduPilot powered UAVs. Instructions for *using QGroundControl* are provided below (you may not need them because the UI is very intuitive!).
+
+[User Manual](https://docs.qgroundcontrol.com/en/)
+
+[Indrones Build Manual](https://docs.qgroundcontrol.com/en/) 
 
 All the code is open-source, so you can contribute and evolve it as you want.
 The [Developer Guide](https://dev.qgroundcontrol.com/en/) explains how to [build](https://dev.qgroundcontrol.com/en/getting_started/) and extend QGC.
-
-*A professionally customized version of QGroundControl with enhanced security, branding, and role-based access control.*
 
 **Developer:** Koushik Rapolu |  **Organization:** INDRONES
 

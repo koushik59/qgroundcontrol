@@ -1,20 +1,14 @@
-# QGroundControl Ground Control Station
-
-[![Releases](https://img.shields.io/github/release/mavlink/QGroundControl.svg)](https://github.com/mavlink/QGroundControl/releases)
-
-*QGroundControl* (QGC) is an intuitive and powerful ground control station (GCS) for UAVs.
+# Custom QGroundControl - INDRONES Edition
 
 The primary goal of QGC is ease of use for both first time and professional users.
-It provides full flight control and mission planning for any MAVLink enabled drone, and vehicle setup for both PX4 and ArduPilot powered UAVs. Instructions for *using QGroundControl* are provided in the [User Manual](https://docs.qgroundcontrol.com/en/) (you may not need them because the UI is very intuitive!)
+It provides full flight control and mission planning for any MAVLink enabled drone, and vehicle setup for  ArduPilot powered UAVs. Instructions for *using QGroundControl* are provided in the [User Manual](https://docs.qgroundcontrol.com/en/) [Indrones Build Manual](https://docs.qgroundcontrol.com/en/) (you may not need them because the UI is very intuitive!)
 
 All the code is open-source, so you can contribute and evolve it as you want.
 The [Developer Guide](https://dev.qgroundcontrol.com/en/) explains how to [build](https://dev.qgroundcontrol.com/en/getting_started/) and extend QGC.
 
-# Custom QGroundControl - INDRONES Edition
-
 *A professionally customized version of QGroundControl with enhanced security, branding, and role-based access control.*
 
-**Developer:** Koushik Rapolu| **Organization:** INDRONES
+**Developer:** Koushik Rapolu |  **Organization:** INDRONES
 
 ## Overview
 
@@ -43,8 +37,6 @@ Key Features
 - **Operator Role**: Basic flight operations and monitoring
 - **Engineer Role**: Full system access including firmware upgrades
 - Automatic feature hiding based on user permissions
-
-
 
 
 Key Links:

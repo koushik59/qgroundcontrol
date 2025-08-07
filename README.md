@@ -6,7 +6,7 @@ This custom build provides full flight control and mission planning for any MAVL
 
 [User Manual](https://docs.qgroundcontrol.com/en/)
 
-[Indrones Build Manual](https://docs.qgroundcontrol.com/en/) 
+[Indrones Build Manual](https://docs.google.com/document/d/15A1KC0IWApcN8BfCccUSCxeX6EFCyFfSPtEqpCeQaTw/edit?usp=sharing) 
 
 All the code is open-source, so you can contribute and evolve it as you want.
 The [Developer Guide](https://dev.qgroundcontrol.com/en/) explains how to [build](https://dev.qgroundcontrol.com/en/getting_started/) and extend QGC.

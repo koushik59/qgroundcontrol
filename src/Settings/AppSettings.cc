@@ -132,6 +132,10 @@ DECLARE_SETTINGGROUP(App, "")
     _checkSavePathDirectories();
 }
 
+DECLARE_SETTINGSFACT(AppSettings, userLoginRole)
+
+
+
 DECLARE_SETTINGSFACT(AppSettings, offlineEditingFirmwareClass)
 DECLARE_SETTINGSFACT(AppSettings, offlineEditingVehicleClass)
 DECLARE_SETTINGSFACT(AppSettings, offlineEditingCruiseSpeed)
@@ -172,6 +176,7 @@ DECLARE_SETTINGSFACT(AppSettings, firstRunPromptIdsShown)
 DECLARE_SETTINGSFACT(AppSettings, forwardMavlink)
 DECLARE_SETTINGSFACT(AppSettings, forwardMavlinkHostName)
 DECLARE_SETTINGSFACT(AppSettings, forwardMavlinkAPMSupportHostName)
+
 
 DECLARE_SETTINGSFACT_NO_FUNC(AppSettings, indoorPalette)
 {
@@ -392,3 +397,8 @@ QLocale::Language AppSettings::_qLocaleLanguageID(void)
 
     return id;
 }
+
+// AppSettings::AppSettings(QObject* parent) : SettingsGroup("AppSettings", QString() /* root settings group */, parent)
+// {
+// }
+

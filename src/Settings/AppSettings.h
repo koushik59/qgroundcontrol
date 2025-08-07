@@ -25,7 +25,7 @@ public:
     AppSettings(QObject* parent = nullptr);
 
     DEFINE_SETTING_NAME_GROUP()
-
+    DEFINE_SETTINGFACT(userLoginRole)
     DEFINE_SETTINGFACT(offlineEditingFirmwareClass)
     DEFINE_SETTINGFACT(offlineEditingVehicleClass)
     DEFINE_SETTINGFACT(offlineEditingCruiseSpeed)

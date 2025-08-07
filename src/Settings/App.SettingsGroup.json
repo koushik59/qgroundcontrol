@@ -341,5 +341,15 @@
     "type":      "string",
     "default":   "support.ardupilot.org:xxxx"
 }
+,
+{
+    "name": "userLoginRole",
+    "shortDesc": "User login role",
+    "longDesc": "Role of the logged-in user (e.g., Operator or Engineer)",
+    "type": "string",
+    "default": "Operator",
+    "qgcVersion": 1
+}
+
 ]
 }

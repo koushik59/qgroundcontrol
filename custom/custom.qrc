@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="custom/img">
+    <qresource prefix="/custom/img">
         <file alias="altitude.svg">res/Images/altitude.svg</file>
         <file alias="attitude_crosshair.svg">res/Images/attitude_crosshair.svg</file>
         <file alias="attitude_dial.svg">res/Images/attitude_dial.svg</file>
@@ -13,11 +13,12 @@
         <file alias="odometer.svg">res/Images/odometer.svg</file>
         <file alias="vertical_speed.svg">res/Images/vertical_speed.svg</file>
         <file alias="CustomAppIcon.png">res/Images/CustomAppIcon.png</file>
+        <file alias="custom_splash.png">res/Images/custom_splash.png</file>
     </qresource>
     <qresource prefix="/qmlimages">
-	<file alias="PaperPlane.svg">res/Images/CustomVehicleIcon.svg</file>
+        <file alias="PaperPlane.svg">res/Images/CustomVehicleIcon.svg</file>
     </qresource>
-    <qresource prefix="Custom/Widgets">
+    <qresource prefix="/Custom/Widgets">
         <file alias="Custom/Widgets/CustomArtificialHorizon.qml">res/Custom/Widgets/CustomArtificialHorizon.qml</file>
         <file alias="Custom/Widgets/CustomAttitudeWidget.qml">res/Custom/Widgets/CustomAttitudeWidget.qml</file>
         <file alias="Custom/Widgets/CustomIconButton.qml">res/Custom/Widgets/CustomIconButton.qml</file>
@@ -29,6 +30,11 @@
         <file alias="Custom/Widgets/qmldir">res/Custom/Widgets/qmldir</file>
     </qresource>
     <qresource prefix="/qml">
-        <file alias="QGroundControl/FlightDisplay/FlyViewCustomLayer.qml">res/CustomFlyViewOverlay.qml</file>
+        <file alias="QGroundControl/FlightDisplay/FlyViewCustomLayer.qml">../src/FlightDisplay/FlyViewCustomLayer.qml</file>
+    </qresource>
+    <qresource prefix="/custom">
+        <file>LoginPage.qml</file>
+        <file>LogoutButton.qml</file>
+        <file>SplashOverlay.qml</file>
     </qresource>
 </RCC>
